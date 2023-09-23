@@ -1,8 +1,8 @@
 
 const Banner = () => {
-    return (
+       return (
         <div>
-            <h2>Banner Section</h2>
+            <h2>Banner Section : {item.length}</h2>
         </div>
     );
 };
