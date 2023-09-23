@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types'
 import { HiOutlineLocationMarker, HiOutlineCurrencyDollar } from "react-icons/hi";
+import { Link } from "react-router-dom";
 const Job = ({job}) => {
-    const {logo, job_title, company_name, remote_or_onsite, location, job_type, salary} = job;
+    const {id, logo, job_title, company_name, remote_or_onsite, location, job_type, salary} = job;
     return (
         <div className='border border-gray-200 p-8 space-y-4 rounded-md'>
             <img src={logo} alt="" />
@@ -19,7 +20,9 @@ const Job = ({job}) => {
                     <p>{salary}</p>
                 </div>
             </div>
-            <button className='btn bg-gradient-to-r from-[#7E90FE] to-[#9873FF] text-white'>View Details</button>
+            <div>
+            <Link to={`/job/${id}`}><button className='btn bg-gradient-to-r from-[#7E90FE] to-[#9873FF] text-white'>View Details</button></Link>
+            </div>
         </div>
     );
 };
